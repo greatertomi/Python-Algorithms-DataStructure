@@ -101,6 +101,15 @@ class SinglyLinkedList:
 
         return list1
 
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.value
+            node = node.next
+
+    def __repr__(self):
+        return str([v for v in self])
+
 
 linked_list = SinglyLinkedList()
 linked_list.append(-1)
@@ -109,9 +118,10 @@ linked_list.append(4)
 linked_list.append(9)
 linked_list.append(12)
 
-node = linked_list.head
-linked_list.insert(25, 2)
-# print(linked_list.to_list())
-while node:
-    print(node.value)
-    node = node.next
+print(linked_list)
+# node = linked_list.head
+# linked_list.insert(25, 2)
+# # print(linked_list.to_list())
+# while node:
+#     print(node.value)
+#     node = node.next
