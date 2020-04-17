@@ -4,7 +4,6 @@ def binary_search(arr, num):
     start = 0
     end = len(arr) - 1
     middle = math.floor((start + end) / 2)
-
     while arr[middle] != num and start <= end:
         if num < arr[middle]:
             end = middle - 1
